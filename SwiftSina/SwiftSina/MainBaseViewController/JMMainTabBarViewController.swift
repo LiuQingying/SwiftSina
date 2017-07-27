@@ -40,11 +40,13 @@ class JMMainTabBarViewController: UITabBarController {
         let vc = vcCls.init()
         vc.title = title
         vc.tabBarItem.image = UIImage.init(named: imageName)
-        
-        vc.tabBarItem.selectedImage =  UIImage.init(named: imageName + "_highlighted")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal);
+        vc.tabBarItem.selectedImage =  UIImage.init(named: imageName + "_highlighted")?.withRenderingMode(.alwaysOriginal);
         let navVC = JMNavigationViewController(rootViewController: vc)
         addChildViewController(navVC)
         
     }
-
+    private func string() ->String{
+        return "  ";
+        
+    }
 }
