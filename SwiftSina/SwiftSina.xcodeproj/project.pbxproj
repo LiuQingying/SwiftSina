@@ -24,6 +24,7 @@
 		2E3121571F1E52390023D139 /* JMMainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3121561F1E52390023D139 /* JMMainTabBarViewController.swift */; };
 		2E3121591F1E52560023D139 /* JMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3121581F1E52560023D139 /* JMBaseViewController.swift */; };
 		2E31215B1F1E52930023D139 /* JMNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E31215A1F1E52930023D139 /* JMNavigationViewController.swift */; };
+		2EF9A1DD1F2A36CE000615DD /* JMHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF9A1DC1F2A36CE000615DD /* JMHomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		2E3121561F1E52390023D139 /* JMMainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMMainTabBarViewController.swift; sourceTree = "<group>"; };
 		2E3121581F1E52560023D139 /* JMBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMBaseViewController.swift; sourceTree = "<group>"; };
 		2E31215A1F1E52930023D139 /* JMNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMNavigationViewController.swift; sourceTree = "<group>"; };
+		2EF9A1DC1F2A36CE000615DD /* JMHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMHomeModel.swift; sourceTree = "<group>"; };
 		468E312C1630DC2F088BD9A4 /* Pods_SwiftSina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		978F274FB812D1198DCBA30C /* Pods-SwiftSina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSina/Pods-SwiftSina.debug.xcconfig"; sourceTree = "<group>"; };
 		D1DFB38C9138E342C5F5961D /* Pods-SwiftSina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSina.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSina/Pods-SwiftSina.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				2E31214B1F1E50D80023D139 /* JMHomeViewController.swift */,
 				2E0B79021F24B07100790271 /* JMHomeCell.swift */,
+				2EF9A1DC1F2A36CE000615DD /* JMHomeModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E31214C1F1E50D80023D139 /* JMHomeViewController.swift in Sources */,
+				2EF9A1DD1F2A36CE000615DD /* JMHomeModel.swift in Sources */,
 				2E3121591F1E52560023D139 /* JMBaseViewController.swift in Sources */,
 				2E31214E1F1E50F50023D139 /* JMMessageViewController.swift in Sources */,
 				2E3121501F1E50FF0023D139 /* JMMainViewController.swift in Sources */,

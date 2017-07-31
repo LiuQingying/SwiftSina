@@ -12,7 +12,7 @@ import SwiftyJSON
 class JMHomeViewController: JMBaseViewController,UITableViewDataSource,UITableViewDelegate {
     var _homeTableView :UITableView?
     var json :JSON = JSON.null
-    var array :[Any]?
+    var modelArry :[JMHomeModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,14 +36,19 @@ class JMHomeViewController: JMBaseViewController,UITableViewDataSource,UITableVi
         case Type.array, Type.dictionary:
             return self.json["data"].count
         default:
-            return 1
+            return 0
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "id")
-        cell?.textLabel?.text = String.init(format: "%ld", indexPath.row)
-        return cell!
+        let cell :JMHomeCell = tableView.dequeueReusableCell(withIdentifier: "id") as! JMHomeCell
+//        cell.nickLabel.text = self.modelArry?[indexPath.row].author
+        let model :JMHomeModel = self.modelArry![indexPath.row]
+        cell.setmodel(model: model)
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
     let requestComplete: (HTTPURLResponse?, Result<String>) -> Void = { response, result in
         let end = CACurrentMediaTime()
@@ -72,8 +77,11 @@ class JMHomeViewController: JMBaseViewController,UITableViewDataSource,UITableVi
         request.responseString { response in
             requestComplete(response.response, response.result)
             self.json =  JSON(parseJSON: response.result.value!)
+            let array = self.json["data"].arrayObject as?[[String :AnyObject]]
+            self.modelArry = JMHomeModel.dictForModel(list: array!)
+            JMPrint("\(String(describing: self.modelArry?[1].author))")
             self._homeTableView?.reloadData()
-            print("\(self.json["data"])")
+//            print("\(self.json["data"])")
 //            print("\(json)")
 //            JMPrint("\(String(describing: response.result.value))")
         }
